@@ -21,6 +21,7 @@ export const Hero = async ({ dictionary }: HeroProps) => (
               "use server";
 
               return (
+                //TODO: Remove this button without getting a ton of errors
                 <Button asChild className="gap-4" size="sm" variant="secondary">
                   <Link href={`/blog/${data.blog.posts.item?._slug}`}>
                     {dictionary.web.home.hero.announcement}{" "}
@@ -40,16 +41,6 @@ export const Hero = async ({ dictionary }: HeroProps) => (
           </p>
         </div>
         <div className="flex flex-row gap-3">
-          <Button asChild className="gap-4" size="lg" variant="outline">
-            <Link href="/contact">
-              Get in touch <PhoneCall className="h-4 w-4" />
-            </Link>
-          </Button>
-          <Button asChild className="gap-4" size="lg">
-            <Link href={env.NEXT_PUBLIC_APP_URL}>
-              Sign up <MoveRight className="h-4 w-4" />
-            </Link>
-          </Button>
         </div>
       </div>
     </div>
